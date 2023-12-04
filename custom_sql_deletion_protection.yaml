@@ -1,0 +1,8 @@
+severity: MEDIUM
+description: "检查SQL实例是否开启了删除保护"
+recommendation: "建议SQL实例开启删除保护，可防止误删除"
+resource_selector:
+  resource_types:
+  - sqladmin.googleapis.com/Instance
+predicate:
+  expression: resource.settings.deletionProtectionEnabled == false

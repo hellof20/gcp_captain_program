@@ -1,0 +1,8 @@
+severity: HIGH
+description: "检查SQL实例是否开启了磁盘自动扩展"
+recommendation: "建议QL实例开启磁盘自动扩展，防止磁盘空间耗尽"
+resource_selector:
+  resource_types:
+  - sqladmin.googleapis.com/Instance
+predicate:
+  expression: resource.settings.storageAutoResize == false
