@@ -1,0 +1,8 @@
+severity: HIGH
+description: "检查SQL实例是否配置了维护窗口"
+recommendation: "强烈建议设置维护窗口，否则不会发送维护提醒"
+resource_selector:
+  resource_types:
+  - sqladmin.googleapis.com/Instance
+predicate:
+  expression: resource.settings.maintenanceWindow.day == 0
