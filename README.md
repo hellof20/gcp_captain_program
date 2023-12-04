@@ -1,5 +1,8 @@
 # gcp_captain_program
 
+## Prerequisites
+Enable Security Command Center Preminum Level
+
 ## Create custom module
 - custom module for project
 ```
