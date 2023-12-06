@@ -1,0 +1,8 @@
+severity: HIGH
+description: "检查SQL实例是否启用了高可用"
+recommendation: "生产数据库实例建议启用HA"
+resource_selector:
+  resource_types:
+  - sqladmin.googleapis.com/Instance
+predicate:
+  expression: resource.settings.availabilityType == 'ZONAL' && resource.instance.instanceType != 'READ_REPLICA_INSTANCE'
