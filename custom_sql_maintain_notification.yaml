@@ -1,0 +1,8 @@
+severity: HIGH
+description: "检查SQL实例是否有维护事件"
+recommendation: "检查SQL实例是否有维护事件"
+resource_selector:
+  resource_types:
+  - sqladmin.googleapis.com/Instance
+predicate:
+  expression: has(resource.scheduledMaintenance)
