@@ -1,4 +1,4 @@
-severity: HIGH
+severity: MEDIUM
 description: "检查SQL实例是否启用了Query Insight"
 recommendation: "建议SQL实例启用QueryInsight，方便对性能问题进行排查"
 resource_selector:

@@ -1,0 +1,8 @@
+severity: HIGH
+description: "检查GKE集群是否为区域级"
+recommendation: "建议使用区域级别集群, 否则控制平面升级会导致API Server无法访问"
+resource_selector:
+  resource_types:
+  - container.googleapis.com/Cluster
+predicate:
+  expression: "!resource.location.matches('^[a-z]*-[a-z]*[0-9]*$')"

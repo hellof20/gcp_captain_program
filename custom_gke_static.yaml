@@ -1,0 +1,8 @@
+severity: HIGH
+description: "检查GKE集群是否为静态版本"
+recommendation: "对于有状态应用，推荐使用集群静态版本"
+resource_selector:
+  resource_types:
+  - container.googleapis.com/Cluster
+predicate:
+  expression: has(resource.releaseChannel.channel)
