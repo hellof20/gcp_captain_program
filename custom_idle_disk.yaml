@@ -1,0 +1,8 @@
+severity: HIGH
+description: 检查是否为空闲的磁盘
+recommendation: 删除空闲不需要的磁盘
+resourceSelector:
+  resourceTypes:
+  - compute.googleapis.com/Disk
+predicate:
+  expression: '!has(resource.users)'

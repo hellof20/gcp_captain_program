@@ -1,0 +1,8 @@
+description: 检查是否有空闲的公网IP
+predicate:
+  expression: resource.addressType == 'EXTERNAL' && resource.status == 'RESERVED'
+recommendation: 释放不需要的空闲IP以节约成本
+resourceSelector:
+  resourceTypes:
+  - compute.googleapis.com/Address
+severity: HIGH
